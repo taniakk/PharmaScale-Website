@@ -100,6 +100,9 @@
             transform: translateY(-4px);
             box-shadow: 0 12px 30px -10px rgba(16, 200, 114, 0.25);
         }
+        html body{
+            overflow-x: hidden;
+        }
     </style>
 </head>
 <body class="bg-brand-pureDark text-slate-200 font-sans antialiased selection:bg-brand-cyan selection:text-slate-950">
@@ -459,24 +462,29 @@
             </div>
         </div>
 
-        <!-- Stats/Highlights Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20" data-aos="fade-up" data-aos-delay="200">
-            <div class="glass-card-pitch logo-gradient-bg p-6 rounded-2xl text-center">
-                <p class="text-3xl font-extrabold text-brand-cyan mb-1">100%</p>
-                <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Pharma-Focused</p>
+        <!-- ================= STATS / HIGHLIGHTS GRID (MOBILE RESPONSIVE) ================= -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-14 sm:mt-20" data-aos="fade-up" data-aos-delay="200">
+            
+            <div class="glass-card-pitch logo-gradient-bg p-4 sm:p-6 rounded-2xl text-center">
+                <p class="text-2xl sm:text-3xl font-extrabold text-brand-cyan mb-1">100%</p>
+                <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium">Pharma-Focused</p>
             </div>
-            <div class="glass-card-pitch logo-gradient-bg p-6 rounded-2xl text-center">
-                <p class="text-3xl font-extrabold text-brand-green mb-1">AI-Powered</p>
-                <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Automation Systems</p>
+
+            <div class="glass-card-pitch logo-gradient-bg p-4 sm:p-6 rounded-2xl text-center">
+                <p class="text-2xl sm:text-3xl font-extrabold text-brand-green mb-1">AI-Powered</p>
+                <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium">Automation Systems</p>
             </div>
-            <div class="glass-card-pitch logo-gradient-bg p-6 rounded-2xl text-center">
-                <p class="text-3xl font-extrabold text-brand-cyan mb-1">End-to-End</p>
-                <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Growth Ecosystem</p>
+
+            <div class="glass-card-pitch logo-gradient-bg p-4 sm:p-6 rounded-2xl text-center">
+                <p class="text-2xl sm:text-3xl font-extrabold text-brand-cyan mb-1">End-to-End</p>
+                <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium">Growth Ecosystem</p>
             </div>
-            <div class="glass-card-pitch logo-gradient-bg p-6 rounded-2xl text-center">
-                <p class="text-3xl font-extrabold text-brand-green mb-1">24/7</p>
-                <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Automated Response</p>
+
+            <div class="glass-card-pitch logo-gradient-bg p-4 sm:p-6 rounded-2xl text-center">
+                <p class="text-2xl sm:text-3xl font-extrabold text-brand-green mb-1">24/7</p>
+                <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium">Automated Response</p>
             </div>
+
         </div>
     </div>
 </section>
