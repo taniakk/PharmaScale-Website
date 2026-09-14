@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | PharmaScale</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brandBlue: { light: '#3b82f6', DEFAULT: '#004b9c', dark: '#002c5f' },
+                        brandGreen: { light: '#34d399', DEFAULT: '#10b981', dark: '#047857' }
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(135deg, #004b9c 0%, #10b981 100%)',
+                        'brand-gradient-soft': 'linear-gradient(135deg, #f8fafc 0%, #ecfdf5 100%)',
+                        'brand-gradient-light': 'linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #ffffff; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .bg-grid-pattern-light { background-image: linear-gradient(rgba(0, 75, 156, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 75, 156, 0.03) 1px, transparent 1px); background-size: 50px 50px; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+<!-- NAVIGATION -->
+<nav id="mainNav" class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                <img
+                    src="/images/logo.jpeg"
+                    alt="PharmaScale Logo"
+                    class="h-20 w-auto object-contain"
+                >
+            </a>
+
+            <!-- ====== DESKTOP MENU ====== -->
+            <div class="hidden lg:flex space-x-6 items-center text-sm font-medium text-gray-600">
+
+                <!-- ============ SOLUTIONS DROPDOWN ============ -->
+                <div class="relative group">
+                    <a href="#" class="hover:text-brandBlue transition flex items-center py-8">
+                        Solutions <i class="fa-solid fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute left-0 top-full w-72 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 translate-y-2 group-hover:translate-y-0">
+                        <div class="p-2 grid grid-cols-1 gap-1 max-h-[70vh] overflow-y-auto">
+
+                            <a href="ai-for-pharma.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-brain text-brandBlue w-5 text-center"></i>
+                                <span>AI for Pharma</span>
+                            </a>
+
+                            <a href="pharma-growth.html#transformation" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-laptop-medical text-brandBlue w-5 text-center"></i>
+                                <span>Digital Transformation</span>
+                            </a>
+
+                            <a href="pharma-growth.html#engage" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-comments text-brandBlue w-5 text-center"></i>
+                                <span>Customer Engagement</span>
+                            </a>
+
+                            <a href="services.html#sales-auto" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-robot text-brandBlue w-5 text-center"></i>
+                                <span>Sales Automation</span>
+                            </a>
+
+                            <a href="pharma-growth.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-arrow-trend-up text-brandBlue w-5 text-center"></i>
+                                <span>Pharma Growth</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ SERVICES DROPDOWN ============ -->
+                <div class="relative group">
+                    <a href="services.html" class="hover:text-brandBlue transition flex items-center py-8">
+                        Services <i class="fa-solid fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute left-0 top-full w-72 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 translate-y-2 group-hover:translate-y-0">
+                        <div class="p-2 grid grid-cols-1 gap-1 max-h-[70vh] overflow-y-auto">
+
+                            <a href="services.html#digital-marketing" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-bullhorn text-brandBlue w-5 text-center"></i>
+                                <span>Digital Marketing</span>
+                            </a>
+
+                            <a href="services.html#web-dev" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-laptop-code text-brandBlue w-5 text-center"></i>
+                                <span>Website Development</span>
+                            </a>
+
+                            <a href="services.html#digital-marketing" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-magnifying-glass text-brandBlue w-5 text-center"></i>
+                                <span>SEO</span>
+                            </a>
+
+                            <a href="services.html#whatsapp" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-brands fa-whatsapp text-brandBlue w-5 text-center"></i>
+                                <span>WhatsApp Automation</span>
+                            </a>
+
+                            <a href="services.html#crm" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-users-gear text-brandBlue w-5 text-center"></i>
+                                <span>Pharma CRM</span>
+                            </a>
+
+                            <a href="services.html#lead-gen" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-magnet text-brandBlue w-5 text-center"></i>
+                                <span>Lead Generation</span>
+                            </a>
+
+                            <a href="services.html#social-content" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-share-nodes text-brandBlue w-5 text-center"></i>
+                                <span>Content & Social Media</span>
+                            </a>
+
+                            <a href="services.html#analytics" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-chart-pie text-brandBlue w-5 text-center"></i>
+                                <span>Analytics & Reporting</span>
+                            </a>
+
+                            <div class="border-t border-gray-100 mt-2 pt-2">
+                                <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gradient-to-br hover:from-brandBlue hover:to-brandGreen hover:text-white rounded-lg transition text-brandBlue font-semibold">
+                                    <i class="fa-solid fa-arrow-right w-5 text-center"></i>
+                                    <span>View All Services</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pharma Growth -->
+                <a href="pharma-growth.html" class="hover:text-brandBlue transition py-8">Pharma Growth</a>
+
+                <!-- Case Studies -->
+                <a href="case-studies.html" class="hover:text-brandBlue transition py-8">Case Studies</a>
+
+                <!-- About -->
+                <a href="index.html#about" class="hover:text-brandBlue transition py-8">About</a>
+
+                <!-- Contact -->
+                <a href="contact.html" class="hover:text-brandBlue transition py-8">Contact</a>
+            </div>
+
+            <!-- CTA Button (Desktop) -->
+            <div class="hidden lg:flex">
+                <a href="contact.html" class="bg-gradient-to-br from-brandBlue to-brandGreen text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition duration-300">
+                    Book a Free Audit
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex items-center">
+                <button id="mobileMenuBtn" type="button" class="text-gray-600 hover:text-brandBlue focus:outline-none p-2 rounded-lg transition" aria-label="Toggle Menu">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MOBILE MENU PANEL ====== -->
+    <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-gray-100 shadow-xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-1">
+
+            <!-- ============ SOLUTIONS ACCORDION ============ -->
+            <div>
+                <button id="mobileSolutionsToggle" type="button" class="w-full flex justify-between items-center px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                    <span>Solutions</span>
+                    <i id="mobileSolutionsChevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                </button>
+                <div id="mobileSolutionsMenu" class="hidden pl-2 mt-1 space-y-1 border-l-2 border-brandGreen/20 ml-4">
+
+                    <a href="ai-for-pharma.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-brain text-brandBlue w-5 text-center"></i>
+                        <span>AI for Pharma</span>
+                    </a>
+                    <a href="pharma-growth.html#transformation" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-laptop-medical text-brandBlue w-5 text-center"></i>
+                        <span>Digital Transformation</span>
+                    </a>
+                    <a href="pharma-growth.html#engage" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-comments text-brandBlue w-5 text-center"></i>
+                        <span>Customer Engagement</span>
+                    </a>
+                    <a href="services.html#sales-auto" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-robot text-brandBlue w-5 text-center"></i>
+                        <span>Sales Automation</span>
+                    </a>
+                    <a href="pharma-growth.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-arrow-trend-up text-brandBlue w-5 text-center"></i>
+                        <span>Pharma Growth</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============ SERVICES ACCORDION ============ -->
+            <div>
+                <button id="mobileServicesToggle" type="button" class="w-full flex justify-between items-center px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                    <span>Services</span>
+                    <i id="mobileServicesChevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                </button>
+                <div id="mobileServicesMenu" class="hidden pl-2 mt-1 space-y-1 border-l-2 border-brandGreen/20 ml-4">
+
+                    <a href="services.html#digital-marketing" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-bullhorn text-brandBlue w-5 text-center"></i>
+                        <span>Digital Marketing</span>
+                    </a>
+                    <a href="services.html#web-dev" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-laptop-code text-brandBlue w-5 text-center"></i>
+                        <span>Website Development</span>
+                    </a>
+                    <a href="services.html#digital-marketing" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-magnifying-glass text-brandBlue w-5 text-center"></i>
+                        <span>SEO</span>
+                    </a>
+                    <a href="services.html#whatsapp" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-brands fa-whatsapp text-brandBlue w-5 text-center"></i>
+                        <span>WhatsApp Automation</span>
+                    </a>
+                    <a href="services.html#crm" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-users-gear text-brandBlue w-5 text-center"></i>
+                        <span>Pharma CRM</span>
+                    </a>
+                    <a href="services.html#lead-gen" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-magnet text-brandBlue w-5 text-center"></i>
+                        <span>Lead Generation</span>
+                    </a>
+                    <a href="services.html#social-content" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-share-nodes text-brandBlue w-5 text-center"></i>
+                        <span>Content & Social Media</span>
+                    </a>
+                    <a href="services.html#analytics" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-chart-pie text-brandBlue w-5 text-center"></i>
+                        <span>Analytics & Reporting</span>
+                    </a>
+
+                    <div class="border-t border-gray-100 mt-2 pt-2">
+                        <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-brandBlue rounded-lg hover:bg-gradient-to-br hover:from-brandBlue hover:to-brandGreen hover:text-white transition">
+                            <i class="fa-solid fa-arrow-right w-5 text-center"></i>
+                            <span>View All Services</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Direct Links -->
+            <a href="pharma-growth.html" class="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">Pharma Growth</a>
+            <a href="case-studies.html" class="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">Case Studies</a>
+            <a href="index.html#about" class="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">About</a>
+            <a href="contact.html" class="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">Contact</a>
+
+            <!-- Mobile CTA -->
+            <div class="pt-3 pb-2">
+                <a href="contact.html" class="block w-full text-center bg-gradient-to-br from-brandBlue to-brandGreen text-white px-6 py-3 rounded-full font-semibold shadow-md">
+                    Book a Free Audit
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-brand-gradient-soft overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern-light opacity-50"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brandBlue rounded-full mix-blend-multiply filter blur-[150px] opacity-10 animate-float"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brandGreen rounded-full mix-blend-multiply filter blur-[150px] opacity-10 animate-float" style="animation-delay: -3s;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-down" data-aos-duration="800" class="inline-block mb-6 px-5 py-2 rounded-full bg-white/80 text-brandGreen text-sm font-semibold tracking-wide border border-brandGreen/30 shadow-sm">
+                <i class="fa-solid fa-trophy mr-2"></i> Case Studies
+            </div>
+            
+            <h1 data-aos="fade-up" data-aos-duration="1000" class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight mb-8 leading-tight">
+                Real Problems. <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandGreen">Digital Solutions. Measurable Growth.</span>
+            </h1>
+            
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="mt-4 max-w-3xl mx-auto text-xl text-gray-600 mb-10 font-light">
+                Explore how PharmaScale has helped pharmaceutical businesses transform their traditional operations into connected, automated, and data-driven growth engines.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ CASE STUDY OVERVIEW ============ -->
+    <section class="py-20 bg-white relative z-20 -mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Case Study Overview</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto">A snapshot of the transformations we've delivered across different pharma business types.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Overview Card 01 -->
+                    <a href="#case-study-01" class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-brandBlue/30 hover:shadow-md transition group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-brandBlue/10 text-brandBlue flex items-center justify-center font-bold text-sm">01</div>
+                            <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Mid-Sized Manufacturer</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">From Manual to Connected</h4>
+                        <p class="text-sm text-gray-500">Transforming a traditional pharma company into a digital growth machine.</p>
+                        <div class="mt-4 flex items-center text-brandBlue font-semibold text-sm group-hover:text-brandGreen transition">
+                            Read Case Study <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </div>
+                    </a>
+
+                    <!-- Overview Card 02 -->
+                    <a href="#case-study-02" class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-brandGreen/30 hover:shadow-md transition group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-brandGreen/10 text-brandGreen flex items-center justify-center font-bold text-sm">02</div>
+                            <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">PCD Pharma Company</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Scaling Distributor Acquisition</h4>
+                        <p class="text-sm text-gray-500">Building a predictable digital pipeline for franchise enquiries.</p>
+                        <div class="mt-4 flex items-center text-brandBlue font-semibold text-sm group-hover:text-brandGreen transition">
+                            Read Case Study <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </div>
+                    </a>
+
+                    <!-- Overview Card 03 -->
+                    <a href="#case-study-03" class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-brandBlue/30 hover:shadow-md transition group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-brandBlue/10 text-brandBlue flex items-center justify-center font-bold text-sm">03</div>
+                            <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Nutraceutical Brand</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Consumer Engagement at Scale</h4>
+                        <p class="text-sm text-gray-500">Automating customer journeys and repeat purchases.</p>
+                        <div class="mt-4 flex items-center text-brandBlue font-semibold text-sm group-hover:text-brandGreen transition">
+                            Read Case Study <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CASE STUDY 01 ============ -->
+    <section id="case-study-01" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Case Study Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-block px-4 py-1.5 bg-brandBlue/10 text-brandBlue font-bold text-xs uppercase tracking-wider rounded-full mb-4">
+                    Case Study 01
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">PharmaScale Growth Transformation</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">From Manual Operations to a Connected Digital Growth System</p>
+            </div>
+
+            <!-- Business Info Bar -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-building text-brandBlue text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Business Type</h4>
+                    <p class="text-gray-600 text-sm">Mid-sized pharmaceutical company</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-triangle-exclamation text-brandBlue text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">The Challenge</h4>
+                    <p class="text-gray-600 text-sm">Established product portfolio, but relied heavily on traditional customer acquisition and manual follow-up processes.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-clock text-brandBlue text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Timeline</h4>
+                    <p class="text-gray-600 text-sm">Full digital transformation in under 6 months</p>
+                </div>
+            </div>
+
+            <!-- Challenge -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-red-500 uppercase tracking-wider">Step 01</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Challenge</h3>
+                    </div>
+                </div>
+                <div class="bg-red-50/50 border border-red-100 rounded-2xl p-8">
+                    <p class="text-gray-700 mb-6">The company had an established product portfolio and sales network but relied heavily on traditional customer acquisition and manual follow-up processes. Key problems included:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span class="text-sm text-gray-700">Limited digital visibility</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span class="text-sm text-gray-700">Manual lead management</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span class="text-sm text-gray-700">Unstructured WhatsApp enquiries</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span class="text-sm text-gray-700">No centralized customer database</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span class="text-sm text-gray-700">Delayed follow-ups</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span class="text-sm text-gray-700">Limited campaign analytics</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
+                            <span class="text-sm text-gray-700">Fragmented reporting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Step 02</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Solution</h3>
+                    </div>
+                </div>
+                <div class="bg-brand-gradient-light rounded-2xl p-8 border border-brandBlue/10">
+                    <p class="text-gray-700 mb-6">PharmaScale designed a digital growth ecosystem consisting of:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-globe text-brandBlue"></i>
+                            <span class="text-sm font-medium text-gray-800">Modern pharma website</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-bullhorn text-brandBlue"></i>
+                            <span class="text-sm font-medium text-gray-800">Lead-generation campaigns</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-brandBlue"></i>
+                            <span class="text-sm font-medium text-gray-800">WhatsApp automation</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-users-gear text-brandGreen"></i>
+                            <span class="text-sm font-medium text-gray-800">CRM</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-filter text-brandGreen"></i>
+                            <span class="text-sm font-medium text-gray-800">Lead qualification</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-clock-rotate-left text-brandGreen"></i>
+                            <span class="text-sm font-medium text-gray-800">Automated follow-ups</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-chart-line text-brandBlue"></i>
+                            <span class="text-sm font-medium text-gray-800">Analytics dashboard</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-brain text-brandBlue"></i>
+                            <span class="text-sm font-medium text-gray-800">AI-assisted content</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-file-lines text-brandGreen"></i>
+                            <span class="text-sm font-medium text-gray-800">Sales reporting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Step 03</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Implementation</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandBlue text-white flex items-center justify-center font-bold text-xs flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Discovery & Diagnosis</h4>
+                                <p class="text-sm text-gray-600">Understood the existing sales process, identified digital gaps, and mapped bottlenecks across lead management, follow-up, and reporting.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandBlue text-white flex items-center justify-center font-bold text-xs flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Strategy & Design</h4>
+                                <p class="text-sm text-gray-600">Created a customized digital roadmap, selected the right technology stack, and designed the unified growth ecosystem.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandGreen text-white flex items-center justify-center font-bold text-xs flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Build & Integrate</h4>
+                                <p class="text-sm text-gray-600">Developed the new pharma website, integrated CRM, set up WhatsApp automation, and built the analytics dashboard.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandGreen text-white flex items-center justify-center font-bold text-xs flex-shrink-0">4</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Launch & Train</h4>
+                                <p class="text-sm text-gray-600">Deployed the system, trained the sales team on new workflows, and launched lead-generation campaigns.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brandBlue to-brandGreen text-white flex items-center justify-center font-bold text-xs flex-shrink-0">5</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Optimize</h4>
+                                <p class="text-sm text-gray-600">Continuously monitored data, refined campaigns, and improved automation workflows based on real performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transformation -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Step 04</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Transformation</h3>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Before -->
+                    <div class="bg-gray-100 p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-clock-rotate-left text-red-500 text-xl"></i>
+                            <h4 class="font-bold text-gray-700 uppercase text-sm tracking-wider">Before</h4>
+                        </div>
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">Manual</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">Fragmented</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">Reactive</span></div>
+                        </div>
+                    </div>
+                    <!-- After -->
+                    <div class="bg-gradient-to-br from-brandBlue to-brandGreen p-1 rounded-2xl shadow-lg">
+                        <div class="bg-white p-8 rounded-[14px] h-full">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fa-solid fa-wand-magic-sparkles text-brandGreen text-xl"></i>
+                                <h4 class="font-bold text-brandGreen uppercase text-sm tracking-wider">After</h4>
+                            </div>
+                            <div class="space-y-3 text-gray-800">
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">Connected</span></div>
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">Automated</span></div>
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">Data-driven</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Step 05</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Business Impact</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <p class="text-gray-700 mb-6">The objective was to improve:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-eye text-brandBlue"></i>
+                            <span class="text-sm font-medium text-gray-800">Lead visibility</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-bolt text-brandBlue"></i>
+                            <span class="text-sm font-medium text-gray-800">Response time</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-user-tie text-brandBlue"></i>
+                            <span class="text-sm font-medium text-gray-800">Sales productivity</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-list-check text-brandGreen"></i>
+                            <span class="text-sm font-medium text-gray-800">Follow-up consistency</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-comments text-brandGreen"></i>
+                            <span class="text-sm font-medium text-gray-800">Customer engagement</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-chart-simple text-brandGreen"></i>
+                            <span class="text-sm font-medium text-gray-800">Management visibility</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Lesson -->
+            <div class="bg-gray-900 text-white rounded-3xl p-8 md:p-12 text-center" data-aos="fade-up">
+                <i class="fa-solid fa-quote-left text-brandGreen text-3xl mb-6"></i>
+                <h4 class="text-2xl md:text-3xl font-bold mb-4">The Key Lesson</h4>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Digital transformation does not mean replacing the traditional pharma business model.
+                </p>
+                <p class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brandBlue-light to-brandGreen-light mt-4">
+                    It means giving that model better technology.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CASE STUDY 02 ============ -->
+    <section id="case-study-02" class="py-24 bg-brand-gradient-light scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-block px-4 py-1.5 bg-brandGreen/10 text-brandGreen font-bold text-xs uppercase tracking-wider rounded-full mb-4">
+                    Case Study 02
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Scaling Distributor Acquisition for a PCD Pharma Company</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Building a predictable digital pipeline for franchise and distributor enquiries.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <i class="fa-solid fa-handshake text-brandGreen text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Business Type</h4>
+                    <p class="text-gray-600 text-sm">PCD Pharma Company (Franchise Model)</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <i class="fa-solid fa-triangle-exclamation text-brandBlue text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">The Challenge</h4>
+                    <p class="text-gray-600 text-sm">Inconsistent distributor enquiries and heavy reliance on word-of-mouth for expansion.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <i class="fa-solid fa-clock text-brandBlue text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Timeline</h4>
+                    <p class="text-gray-600 text-sm">90-day activation and scale-up</p>
+                </div>
+            </div>
+
+            <!-- Challenge -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-red-500 uppercase tracking-wider">Step 01</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Challenge</h3>
+                    </div>
+                </div>
+                <div class="bg-white border border-red-100 rounded-2xl p-8">
+                    <p class="text-gray-700 mb-6">The company had a strong product catalogue and a growing franchise network, but lacked a structured digital system to attract new PCD partners consistently.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i><span class="text-sm text-gray-700">No digital funnel for franchise enquiries</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i><span class="text-sm text-gray-700">Enquiries scattered across calls and WhatsApp</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i><span class="text-sm text-gray-700">No qualification criteria for new partners</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i><span class="text-sm text-gray-700">Weak digital brand presence</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Step 02</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Solution</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+                    <p class="text-gray-700 mb-6">PharmaScale built a distributor acquisition engine combining:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-globe text-brandBlue"></i><span class="text-sm font-medium text-gray-800">PCD-focused landing pages</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-bullhorn text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Google & Meta ad campaigns</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-brands fa-whatsapp text-brandGreen"></i><span class="text-sm font-medium text-gray-800">WhatsApp lead capture & qualification</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-users-gear text-brandGreen"></i><span class="text-sm font-medium text-gray-800">CRM for enquiry management</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-file-pdf text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Digital product catalogue</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-chart-pie text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Analytics dashboard for ROI</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Step 03</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Implementation</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandBlue text-white flex items-center justify-center font-bold text-xs flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Funnel Design & Campaign Setup</h4>
+                                <p class="text-sm text-gray-600">Built conversion-optimized landing pages and launched multi-channel ad campaigns targeting prospective PCD partners.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandBlue text-white flex items-center justify-center font-bold text-xs flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">WhatsApp Qualification Workflow</h4>
+                                <p class="text-sm text-gray-600">Automated capture of key business details (location, investment capacity, existing distribution) before routing to sales.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandGreen text-white flex items-center justify-center font-bold text-xs flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">CRM Integration & Team Training</h4>
+                                <p class="text-sm text-gray-600">Centralized all enquiries in a CRM, set up lead assignment rules, and trained the sales team on the new workflow.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brandBlue to-brandGreen text-white flex items-center justify-center font-bold text-xs flex-shrink-0">4</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Optimization & Scale</h4>
+                                <p class="text-sm text-gray-600">Refined targeting based on lead quality, expanded to new regions, and scaled ad spend on best-performing channels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transformation -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Step 04</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Transformation</h3>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-100 p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-3 mb-4"><i class="fa-solid fa-clock-rotate-left text-red-500 text-xl"></i><h4 class="font-bold text-gray-700 uppercase text-sm tracking-wider">Before</h4></div>
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">Word-of-mouth driven</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">Unpredictable enquiries</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">No qualification process</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-brandBlue to-brandGreen p-1 rounded-2xl shadow-lg">
+                        <div class="bg-white p-8 rounded-[14px] h-full">
+                            <div class="flex items-center gap-3 mb-4"><i class="fa-solid fa-wand-magic-sparkles text-brandGreen text-xl"></i><h4 class="font-bold text-brandGreen uppercase text-sm tracking-wider">After</h4></div>
+                            <div class="space-y-3 text-gray-800">
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">Predictable digital funnel</span></div>
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">Qualified leads only</span></div>
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">Data-driven expansion</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Step 05</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Business Impact</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-magnet text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Consistent lead flow</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-filter text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Higher quality enquiries</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-clock text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Faster response time</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-map-location-dot text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Geographic expansion</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-chart-pie text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Transparent ROI tracking</span></div>
+                        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3"><i class="fa-solid fa-user-tie text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Improved sales productivity</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CASE STUDY 03 ============ -->
+    <section id="case-study-03" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-block px-4 py-1.5 bg-brandBlue/10 text-brandBlue font-bold text-xs uppercase tracking-wider rounded-full mb-4">
+                    Case Study 03
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Automating Consumer Engagement for a Nutraceutical Brand</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Building a connected customer journey from first touch to repeat purchase.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-leaf text-brandGreen text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Business Type</h4>
+                    <p class="text-gray-600 text-sm">D2C Nutraceutical Brand</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-triangle-exclamation text-brandBlue text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">The Challenge</h4>
+                    <p class="text-gray-600 text-sm">High one-time purchase rate but poor retention and repeat order frequency.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-clock text-brandBlue text-2xl mb-3"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Timeline</h4>
+                    <p class="text-gray-600 text-sm">60-day deployment and ongoing optimization</p>
+                </div>
+            </div>
+
+            <!-- Challenge -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-red-500 uppercase tracking-wider">Step 01</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Challenge</h3>
+                    </div>
+                </div>
+                <div class="bg-red-50/50 border border-red-100 rounded-2xl p-8">
+                    <p class="text-gray-700 mb-6">The brand was acquiring customers effectively through ads but struggled to retain them or drive repeat purchases.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i><span class="text-sm text-gray-700">No post-purchase engagement</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i><span class="text-sm text-gray-700">Manual WhatsApp support</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i><span class="text-sm text-gray-700">No customer segmentation</span></div>
+                        <div class="flex items-start gap-3"><i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i><span class="text-sm text-gray-700">Low repeat order rate</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Step 02</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Solution</h3>
+                    </div>
+                </div>
+                <div class="bg-brand-gradient-light rounded-2xl p-8 border border-brandBlue/10">
+                    <p class="text-gray-700 mb-6">PharmaScale implemented a customer engagement system powered by AI and automation:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-brands fa-whatsapp text-brandGreen"></i><span class="text-sm font-medium text-gray-800">WhatsApp automation journeys</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-robot text-brandBlue"></i><span class="text-sm font-medium text-gray-800">AI customer assistant</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-users text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Customer segmentation</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-envelope text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Automated email flows</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-cart-shopping text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Repeat purchase reminders</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-chart-pie text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Retention analytics</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Step 03</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Implementation</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandBlue text-white flex items-center justify-center font-bold text-xs flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Customer Journey Mapping</h4>
+                                <p class="text-sm text-gray-600">Mapped every touchpoint from first ad click to repeat purchase to identify engagement gaps.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandBlue text-white flex items-center justify-center font-bold text-xs flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Automation & AI Setup</h4>
+                                <p class="text-sm text-gray-600">Built WhatsApp journeys, set up AI customer assistant, and configured automated email sequences.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brandGreen text-white flex items-center justify-center font-bold text-xs flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Segmentation & Personalization</h4>
+                                <p class="text-sm text-gray-600">Segmented customers by purchase behavior and personalized offers to increase repeat orders.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brandBlue to-brandGreen text-white flex items-center justify-center font-bold text-xs flex-shrink-0">4</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Continuous Optimization</h4>
+                                <p class="text-sm text-gray-600">Monitored retention metrics and refined automation flows based on customer behavior data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transformation -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Step 04</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Transformation</h3>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-100 p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-3 mb-4"><i class="fa-solid fa-clock-rotate-left text-red-500 text-xl"></i><h4 class="font-bold text-gray-700 uppercase text-sm tracking-wider">Before</h4></div>
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">One-time buyers</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">Manual support</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i><span class="font-medium">No retention system</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-brandBlue to-brandGreen p-1 rounded-2xl shadow-lg">
+                        <div class="bg-white p-8 rounded-[14px] h-full">
+                            <div class="flex items-center gap-3 mb-4"><i class="fa-solid fa-wand-magic-sparkles text-brandGreen text-xl"></i><h4 class="font-bold text-brandGreen uppercase text-sm tracking-wider">After</h4></div>
+                            <div class="space-y-3 text-gray-800">
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">Automated retention</span></div>
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">AI-driven support</span></div>
+                                <div class="flex items-center gap-3"><i class="fa-solid fa-check text-brandGreen"></i><span class="font-medium">Repeat purchase engine</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Step 05</span>
+                        <h3 class="text-2xl font-bold text-gray-900">Business Impact</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-repeat text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Higher repeat orders</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-heart text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Improved retention rate</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-headset text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Faster support response</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-users text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Better segmentation</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-magnifying-glass-chart text-brandBlue"></i><span class="text-sm font-medium text-gray-800">Clear retention analytics</span></div>
+                        <div class="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm"><i class="fa-solid fa-arrow-trend-up text-brandGreen"></i><span class="text-sm font-medium text-gray-800">Increased customer LTV</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ INDUSTRIES SERVED ============ -->
+    <section class="py-24 bg-brand-gradient-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-brandGreen font-bold tracking-wide uppercase text-sm mb-2">Industries Served</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Transformations Across the Pharma Ecosystem</h3>
+                <p class="text-lg text-gray-600">Our growth systems are designed for every stage and type of pharmaceutical business.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div data-aos="zoom-in" data-aos-delay="0" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-industry"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Pharma Manufacturers</h4>
+                    <p class="text-sm text-gray-600">Build stronger digital presence, product discovery and customer engagement systems.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="50" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-handshake"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">PCD Pharma Companies</h4>
+                    <p class="text-sm text-gray-600">Generate distributor and business enquiries through digital channels.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Pharma Distributors</h4>
+                    <p class="text-sm text-gray-600">Digitize customer acquisition, product enquiries and follow-ups.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="150" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-warehouse"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Pharma Wholesalers</h4>
+                    <p class="text-sm text-gray-600">Improve digital visibility and streamline customer communication.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-pills"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">OTC & Consumer Brands</h4>
+                    <p class="text-sm text-gray-600">Build consumer-focused digital campaigns and automated engagement systems.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="250" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-leaf"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Nutraceutical Brands</h4>
+                    <p class="text-sm text-gray-600">Create digital acquisition and customer-retention systems.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-brandBlue/10 text-brandBlue flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Medical & Healthcare</h4>
+                    <p class="text-sm text-gray-600">Build digital sales channels and technology-enabled customer engagement.</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="350" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                    <div class="w-10 h-10 rounded-lg bg-brandGreen/10 text-brandGreen flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-rocket"></i></div>
+                    <h4 class="font-bold text-gray-900 mb-2">Emerging Pharma Startups</h4>
+                    <p class="text-sm text-gray-600">Build a scalable digital foundation from day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="py-20 bg-brand-gradient-light relative overflow-hidden border-t border-gray-100">
+        <div class="absolute inset-0 bg-grid-pattern-light opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 data-aos="fade-up" class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Want Your Own Success Story?</h2>
+            <h3 data-aos="fade-up" data-aos-delay="100" class="text-2xl md:text-4xl font-bold text-gray-700 mb-8">Let's Build Your Pharma Growth Engine.</h3>
+            
+            <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+                Every pharma business is unique. Book a free growth audit and we'll identify the specific digital opportunities in your business.
+            </p>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="flex justify-center gap-4 flex-col sm:flex-row">
+                <a href="index.html#contact" class="bg-gradient-to-br from-brandBlue to-brandGreen text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition duration-300 shadow-md">
+                    Book a Free Growth Audit
+                </a>
+                <a href="services.html" class="bg-white border-2 border-brandBlue text-brandBlue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition duration-300">
+                    Explore Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER (Same as other pages) ============ -->
+    <footer class="bg-gray-50 pt-20 pb-10 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div class="lg:col-span-2" data-aos="fade-right">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brandBlue to-brandGreen flex items-center justify-center text-white mr-3">
+                            <i class="fa-solid fa-arrow-trend-up text-xl"></i>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight text-brandBlue">Pharma<span class="text-brandGreen">Scale</span></span>
+                    </div>
+                    <p class="text-brandGreen font-semibold mb-2">AI-Powered Growth for Pharma</p>
+                    <p class="text-gray-500 mb-6 max-w-sm text-sm">
+                        Transform Pharma. Accelerate Growth. Scale with AI. We help pharma companies modernize their marketing, sales and customer engagement with AI, automation and digital technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-brandBlue hover:text-white hover:border-brandBlue transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-brandBlue hover:text-white hover:border-brandBlue transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-brandBlue hover:text-white hover:border-brandBlue transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-brandBlue hover:text-white hover:border-brandBlue transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm">Solutions</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="services.html#ai-solutions" class="text-gray-500 hover:text-brandGreen transition">AI for Pharma</a></li>
+                        <li><a href="services.html#digital-marketing" class="text-gray-500 hover:text-brandGreen transition">Digital Marketing</a></li>
+                        <li><a href="services.html#whatsapp" class="text-gray-500 hover:text-brandGreen transition">WhatsApp Automation</a></li>
+                        <li><a href="services.html#crm" class="text-gray-500 hover:text-brandGreen transition">Pharma CRM</a></li>
+                        <li><a href="services.html#lead-gen" class="text-gray-500 hover:text-brandGreen transition">Lead Generation</a></li>
+                        <li><a href="services.html#sales-auto" class="text-gray-500 hover:text-brandGreen transition">Sales Automation</a></li>
+                        <li><a href="services.html#analytics" class="text-gray-500 hover:text-brandGreen transition">Analytics</a></li>
+                        <li><a href="services.html#digital-transformation" class="text-gray-500 hover:text-brandGreen transition">Digital Transformation</a></li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="text-gray-500 hover:text-brandGreen transition">About Us</a></li>
+                        <li><a href="index.html#why-us" class="text-gray-500 hover:text-brandGreen transition">Why PharmaScale</a></li>
+                        <li><a href="case-studies.html" class="text-gray-500 hover:text-brandGreen transition">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Resources</a></li>
+                        <li><a href="index.html#contact" class="text-gray-500 hover:text-brandGreen transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm">Industries</h4>
+                    <ul class="space-y-3 text-sm mb-6">
+                        <li><a href="index.html#industries" class="text-gray-500 hover:text-brandGreen transition">Pharma Manufacturers</a></li>
+                        <li><a href="index.html#industries" class="text-gray-500 hover:text-brandGreen transition">PCD Pharma</a></li>
+                        <li><a href="index.html#industries" class="text-gray-500 hover:text-brandGreen transition">Pharma Distributors</a></li>
+                        <li><a href="index.html#industries" class="text-gray-500 hover:text-brandGreen transition">OTC Brands</a></li>
+                    </ul>
+                    
+                    <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm mt-6">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 PharmaScale. All rights reserved.
+                </p>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <span class="mr-2">Powered by</span>
+                    <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandGreen">Advanced AI</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ AOS + Navbar JS ============ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // ============ NAVBAR JS ============
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+        const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+        const mobileServicesChevron = document.getElementById('mobileServicesChevron');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-xmark');
+            } else {
+                closeMobileMenu();
+            }
+        });
+
+        mobileServicesToggle.addEventListener('click', () => {
+            mobileServicesMenu.classList.toggle('hidden');
+            mobileServicesChevron.classList.toggle('rotate-180');
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileMenuIcon.classList.remove('fa-xmark');
+            mobileMenuIcon.classList.add('fa-bars');
+            mobileServicesMenu.classList.add('hidden');
+            mobileServicesChevron.classList.remove('rotate-180');
+        }
+
+        // Auto-close on scroll (mobile)
+        let lastScrollY = window.scrollY;
+        const scrollThreshold = 40;
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth < 1024) {
+                const currentScrollY = window.scrollY;
+                if (!mobileMenu.classList.contains('hidden') &&
+                    Math.abs(currentScrollY - lastScrollY) > scrollThreshold) {
+                    closeMobileMenu();
+                }
+                lastScrollY = currentScrollY;
+            }
+        }, { passive: true });
+
+        // Close on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => closeMobileMenu());
+        });
+
+        // Close on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) closeMobileMenu();
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') &&
+                !mobileMenu.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>

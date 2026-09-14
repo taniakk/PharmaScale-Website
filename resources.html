@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Insights | PharmaScale</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brandBlue: { light: '#3b82f6', DEFAULT: '#004b9c', dark: '#002c5f' },
+                        brandGreen: { light: '#34d399', DEFAULT: '#10b981', dark: '#047857' }
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(135deg, #004b9c 0%, #10b981 100%)',
+                        'brand-gradient-soft': 'linear-gradient(135deg, #f8fafc 0%, #ecfdf5 100%)',
+                        'brand-gradient-light': 'linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #ffffff; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .bg-grid-pattern-light { background-image: linear-gradient(rgba(0, 75, 156, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 75, 156, 0.03) 1px, transparent 1px); background-size: 50px 50px; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+<!-- NAVIGATION -->
+<nav id="mainNav" class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                <img
+                    src="/images/logo.jpeg"
+                    alt="PharmaScale Logo"
+                    class="h-20 w-auto object-contain"
+                >
+            </a>
+
+            <!-- ====== DESKTOP MENU ====== -->
+            <div class="hidden lg:flex space-x-6 items-center text-sm font-medium text-gray-600">
+
+                <!-- ============ SOLUTIONS DROPDOWN ============ -->
+                <div class="relative group">
+                    <a href="#" class="hover:text-brandBlue transition flex items-center py-8">
+                        Solutions <i class="fa-solid fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute left-0 top-full w-72 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 translate-y-2 group-hover:translate-y-0">
+                        <div class="p-2 grid grid-cols-1 gap-1 max-h-[70vh] overflow-y-auto">
+
+                            <a href="ai-for-pharma.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-brain text-brandBlue w-5 text-center"></i>
+                                <span>AI for Pharma</span>
+                            </a>
+
+                            <a href="pharma-growth.html#transformation" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-laptop-medical text-brandBlue w-5 text-center"></i>
+                                <span>Digital Transformation</span>
+                            </a>
+
+                            <a href="pharma-growth.html#engage" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-comments text-brandBlue w-5 text-center"></i>
+                                <span>Customer Engagement</span>
+                            </a>
+
+                            <a href="services.html#sales-auto" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-robot text-brandBlue w-5 text-center"></i>
+                                <span>Sales Automation</span>
+                            </a>
+
+                            <a href="pharma-growth.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-arrow-trend-up text-brandBlue w-5 text-center"></i>
+                                <span>Pharma Growth</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ SERVICES DROPDOWN ============ -->
+                <div class="relative group">
+                    <a href="services.html" class="hover:text-brandBlue transition flex items-center py-8">
+                        Services <i class="fa-solid fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute left-0 top-full w-72 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 translate-y-2 group-hover:translate-y-0">
+                        <div class="p-2 grid grid-cols-1 gap-1 max-h-[70vh] overflow-y-auto">
+
+                            <a href="services.html#digital-marketing" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-bullhorn text-brandBlue w-5 text-center"></i>
+                                <span>Digital Marketing</span>
+                            </a>
+
+                            <a href="services.html#web-dev" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-laptop-code text-brandBlue w-5 text-center"></i>
+                                <span>Website Development</span>
+                            </a>
+
+                            <a href="services.html#digital-marketing" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-magnifying-glass text-brandBlue w-5 text-center"></i>
+                                <span>SEO</span>
+                            </a>
+
+                            <a href="services.html#whatsapp" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-brands fa-whatsapp text-brandBlue w-5 text-center"></i>
+                                <span>WhatsApp Automation</span>
+                            </a>
+
+                            <a href="services.html#crm" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-users-gear text-brandBlue w-5 text-center"></i>
+                                <span>Pharma CRM</span>
+                            </a>
+
+                            <a href="services.html#lead-gen" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-magnet text-brandBlue w-5 text-center"></i>
+                                <span>Lead Generation</span>
+                            </a>
+
+                            <a href="services.html#social-content" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-share-nodes text-brandBlue w-5 text-center"></i>
+                                <span>Content & Social Media</span>
+                            </a>
+
+                            <a href="services.html#analytics" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 hover:text-brandBlue rounded-lg transition">
+                                <i class="fa-solid fa-chart-pie text-brandBlue w-5 text-center"></i>
+                                <span>Analytics & Reporting</span>
+                            </a>
+
+                            <div class="border-t border-gray-100 mt-2 pt-2">
+                                <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 hover:bg-gradient-to-br hover:from-brandBlue hover:to-brandGreen hover:text-white rounded-lg transition text-brandBlue font-semibold">
+                                    <i class="fa-solid fa-arrow-right w-5 text-center"></i>
+                                    <span>View All Services</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pharma Growth -->
+                <a href="pharma-growth.html" class="hover:text-brandBlue transition py-8">Pharma Growth</a>
+
+                <!-- Case Studies -->
+                <a href="case-studies.html" class="hover:text-brandBlue transition py-8">Case Studies</a>
+
+                <!-- About -->
+                <a href="index.html#about" class="hover:text-brandBlue transition py-8">About</a>
+
+                <!-- Contact -->
+                <a href="contact.html" class="hover:text-brandBlue transition py-8">Contact</a>
+            </div>
+
+            <!-- CTA Button (Desktop) -->
+            <div class="hidden lg:flex">
+                <a href="contact.html" class="bg-gradient-to-br from-brandBlue to-brandGreen text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition duration-300">
+                    Book a Free Audit
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex items-center">
+                <button id="mobileMenuBtn" type="button" class="text-gray-600 hover:text-brandBlue focus:outline-none p-2 rounded-lg transition" aria-label="Toggle Menu">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MOBILE MENU PANEL ====== -->
+    <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-gray-100 shadow-xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+        <div class="px-4 py-4 space-y-1">
+
+            <!-- ============ SOLUTIONS ACCORDION ============ -->
+            <div>
+                <button id="mobileSolutionsToggle" type="button" class="w-full flex justify-between items-center px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                    <span>Solutions</span>
+                    <i id="mobileSolutionsChevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                </button>
+                <div id="mobileSolutionsMenu" class="hidden pl-2 mt-1 space-y-1 border-l-2 border-brandGreen/20 ml-4">
+
+                    <a href="ai-for-pharma.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-brain text-brandBlue w-5 text-center"></i>
+                        <span>AI for Pharma</span>
+                    </a>
+                    <a href="pharma-growth.html#transformation" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-laptop-medical text-brandBlue w-5 text-center"></i>
+                        <span>Digital Transformation</span>
+                    </a>
+                    <a href="pharma-growth.html#engage" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-comments text-brandBlue w-5 text-center"></i>
+                        <span>Customer Engagement</span>
+                    </a>
+                    <a href="services.html#sales-auto" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-robot text-brandBlue w-5 text-center"></i>
+                        <span>Sales Automation</span>
+                    </a>
+                    <a href="pharma-growth.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-arrow-trend-up text-brandBlue w-5 text-center"></i>
+                        <span>Pharma Growth</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============ SERVICES ACCORDION ============ -->
+            <div>
+                <button id="mobileServicesToggle" type="button" class="w-full flex justify-between items-center px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                    <span>Services</span>
+                    <i id="mobileServicesChevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                </button>
+                <div id="mobileServicesMenu" class="hidden pl-2 mt-1 space-y-1 border-l-2 border-brandGreen/20 ml-4">
+
+                    <a href="services.html#digital-marketing" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-bullhorn text-brandBlue w-5 text-center"></i>
+                        <span>Digital Marketing</span>
+                    </a>
+                    <a href="services.html#web-dev" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-laptop-code text-brandBlue w-5 text-center"></i>
+                        <span>Website Development</span>
+                    </a>
+                    <a href="services.html#digital-marketing" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-magnifying-glass text-brandBlue w-5 text-center"></i>
+                        <span>SEO</span>
+                    </a>
+                    <a href="services.html#whatsapp" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-brands fa-whatsapp text-brandBlue w-5 text-center"></i>
+                        <span>WhatsApp Automation</span>
+                    </a>
+                    <a href="services.html#crm" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-users-gear text-brandBlue w-5 text-center"></i>
+                        <span>Pharma CRM</span>
+                    </a>
+                    <a href="services.html#lead-gen" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-magnet text-brandBlue w-5 text-center"></i>
+                        <span>Lead Generation</span>
+                    </a>
+                    <a href="services.html#social-content" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-share-nodes text-brandBlue w-5 text-center"></i>
+                        <span>Content & Social Media</span>
+                    </a>
+                    <a href="services.html#analytics" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">
+                        <i class="fa-solid fa-chart-pie text-brandBlue w-5 text-center"></i>
+                        <span>Analytics & Reporting</span>
+                    </a>
+
+                    <div class="border-t border-gray-100 mt-2 pt-2">
+                        <a href="services.html" class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-brandBlue rounded-lg hover:bg-gradient-to-br hover:from-brandBlue hover:to-brandGreen hover:text-white transition">
+                            <i class="fa-solid fa-arrow-right w-5 text-center"></i>
+                            <span>View All Services</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Direct Links -->
+            <a href="pharma-growth.html" class="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">Pharma Growth</a>
+            <a href="case-studies.html" class="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">Case Studies</a>
+            <a href="index.html#about" class="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">About</a>
+            <a href="contact.html" class="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-brandBlue transition">Contact</a>
+
+            <!-- Mobile CTA -->
+            <div class="pt-3 pb-2">
+                <a href="contact.html" class="block w-full text-center bg-gradient-to-br from-brandBlue to-brandGreen text-white px-6 py-3 rounded-full font-semibold shadow-md">
+                    Book a Free Audit
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-brand-gradient-soft overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern-light opacity-50"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brandBlue rounded-full mix-blend-multiply filter blur-[150px] opacity-10 animate-float"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brandGreen rounded-full mix-blend-multiply filter blur-[150px] opacity-10 animate-float" style="animation-delay: -3s;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-down" data-aos-duration="800" class="inline-block mb-6 px-5 py-2 rounded-full bg-white/80 text-brandGreen text-sm font-semibold tracking-wide border border-brandGreen/30 shadow-sm">
+                <i class="fa-solid fa-book-open mr-2"></i> PharmaScale Insights
+            </div>
+            
+            <h1 data-aos="fade-up" data-aos-duration="1000" class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight mb-8 leading-tight">
+                Learn. Adapt. <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandGreen">Grow.</span>
+            </h1>
+            
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="mt-4 max-w-3xl mx-auto text-xl text-gray-600 mb-10 font-light">
+                Our resources help pharma leaders understand the changing digital landscape. Explore articles, guides and insights on AI, digital marketing, automation and growth for pharmaceutical businesses.
+            </p>
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="flex justify-center gap-4 flex-col sm:flex-row">
+                <a href="#featured" class="bg-gradient-to-br from-brandBlue to-brandGreen text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition duration-300 shadow-md">
+                    Read Featured Articles
+                </a>
+                <a href="#newsletter" class="bg-white border-2 border-brandBlue text-brandBlue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition duration-300">
+                    Subscribe to Insights
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURED ARTICLES ============ -->
+    <section id="featured" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-brandGreen font-bold tracking-wide uppercase text-sm mb-2">Featured Articles</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Handpicked Insights for Pharma Leaders</h3>
+                <p class="text-lg text-gray-600">Deep dives into the trends shaping the future of pharma growth.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured 1 -->
+                <article data-aos="fade-up" data-aos-delay="0" class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 group">
+                    <div class="relative h-48 overflow-hidden bg-brand-gradient-light">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI in Pharma" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-brandBlue text-white text-xs font-bold px-3 py-1 rounded-full">AI in Pharma</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                            <span><i class="fa-regular fa-calendar mr-1"></i> Featured</span>
+                            <span><i class="fa-regular fa-clock mr-1"></i> 8 min read</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-brandBlue transition">How AI Is Reshaping the Pharma Sales Process</h4>
+                        <p class="text-sm text-gray-600 mb-4">Explore how AI assistants, lead qualification and predictive analytics are transforming field sales in pharma.</p>
+                        <a href="#" class="text-brandBlue font-semibold text-sm flex items-center hover:text-brandGreen transition">Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </article>
+
+                <!-- Featured 2 -->
+                <article data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 group">
+                    <div class="relative h-48 overflow-hidden bg-brand-gradient-light">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-brandGreen text-white text-xs font-bold px-3 py-1 rounded-full">Digital Marketing</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                            <span><i class="fa-regular fa-calendar mr-1"></i> Featured</span>
+                            <span><i class="fa-regular fa-clock mr-1"></i> 6 min read</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-brandBlue transition">Digital Pharma Marketing: A Practical Playbook</h4>
+                        <p class="text-sm text-gray-600 mb-4">A structured approach to building a digital presence for pharmaceutical businesses in 2024.</p>
+                        <a href="#" class="text-brandBlue font-semibold text-sm flex items-center hover:text-brandGreen transition">Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </article>
+
+                <!-- Featured 3 -->
+                <article data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 group">
+                    <div class="relative h-48 overflow-hidden bg-brand-gradient-light">
+                        <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="WhatsApp Automation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-brandBlue text-white text-xs font-bold px-3 py-1 rounded-full">WhatsApp</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                            <span><i class="fa-regular fa-calendar mr-1"></i> Featured</span>
+                            <span><i class="fa-regular fa-clock mr-1"></i> 5 min read</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-brandBlue transition">Why WhatsApp Is the New Pharma Sales Channel</h4>
+                        <p class="text-sm text-gray-600 mb-4">Learn how structured WhatsApp automation can turn conversations into conversions.</p>
+                        <a href="#" class="text-brandBlue font-semibold text-sm flex items-center hover:text-brandGreen transition">Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ AI IN PHARMA ============ -->
+    <section id="ai-in-pharma" class="py-24 bg-brand-gradient-light scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10" data-aos="fade-up">
+                <div class="w-14 h-14 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                    <h2 class="text-brandBlue font-bold tracking-wide uppercase text-sm mb-1">Category</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">AI in Pharma</h3>
+                </div>
+            </div>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl" data-aos="fade-up" data-aos-delay="100">Explore how artificial intelligence is reshaping pharma sales, marketing and customer engagement.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#" data-aos="fade-up" data-aos-delay="0" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">AI in Pharma</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">AI Customer Assistants for Pharma Businesses</h4>
+                    <p class="text-sm text-gray-600 mb-4">How AI assistants are helping pharma teams respond to enquiries faster and more accurately.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="50" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">AI in Pharma</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">AI Lead Qualification Explained</h4>
+                    <p class="text-sm text-gray-600 mb-4">Automatically segment and prioritize incoming leads using AI-based scoring.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">AI in Pharma</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">AI Business Intelligence for Pharma Leaders</h4>
+                    <p class="text-sm text-gray-600 mb-4">Ask business questions and get actionable insights without dashboards.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DIGITAL PHARMA MARKETING ============ -->
+    <section id="digital-marketing" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10" data-aos="fade-up">
+                <div class="w-14 h-14 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <div>
+                    <h2 class="text-brandGreen font-bold tracking-wide uppercase text-sm mb-1">Category</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">Digital Pharma Marketing</h3>
+                </div>
+            </div>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl" data-aos="fade-up" data-aos-delay="100">Practical insights on SEO, social media, content marketing and paid campaigns for pharma.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#" data-aos="fade-up" data-aos-delay="0" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Digital Marketing</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">SEO for Pharma: Where to Start</h4>
+                    <p class="text-sm text-gray-600 mb-4">A beginner's guide to ranking your pharma business on Google.</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="50" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Digital Marketing</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">Content Marketing for PCD Pharma</h4>
+                    <p class="text-sm text-gray-600 mb-4">Building a content strategy that attracts franchise partners.</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Digital Marketing</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">Google Ads for Pharma Distributors</h4>
+                    <p class="text-sm text-gray-600 mb-4">How to structure paid campaigns that generate quality distributor leads.</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHATSAPP AUTOMATION ============ -->
+    <section id="whatsapp-resources" class="py-24 bg-brand-gradient-light scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10" data-aos="fade-up">
+                <div class="w-14 h-14 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-2xl">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <h2 class="text-brandBlue font-bold tracking-wide uppercase text-sm mb-1">Category</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">WhatsApp Automation</h3>
+                </div>
+            </div>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl" data-aos="fade-up" data-aos-delay="100">Learn how to use WhatsApp as a scalable business communication and sales channel in pharma.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#" data-aos="fade-up" data-aos-delay="0" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">WhatsApp</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">WhatsApp Business API for Pharma</h4>
+                    <p class="text-sm text-gray-600 mb-4">What it is and how pharma businesses can use it for lead capture and follow-ups.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="50" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">WhatsApp</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">5 WhatsApp Automation Workflows for Pharma</h4>
+                    <p class="text-sm text-gray-600 mb-4">Real examples of what you can automate with WhatsApp in a pharma business.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">WhatsApp</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">Reducing Response Time with WhatsApp</h4>
+                    <p class="text-sm text-gray-600 mb-4">How faster responses improve lead conversion in pharma sales.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PHARMA CRM ============ -->
+    <section id="crm-resources" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10" data-aos="fade-up">
+                <div class="w-14 h-14 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <div>
+                    <h2 class="text-brandGreen font-bold tracking-wide uppercase text-sm mb-1">Category</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">Pharma CRM</h3>
+                </div>
+            </div>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl" data-aos="fade-up" data-aos-delay="100">Everything you need to know about choosing, implementing and getting value from a pharma CRM.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#" data-aos="fade-up" data-aos-delay="0" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">CRM</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">Why Pharma Businesses Need a CRM</h4>
+                    <p class="text-sm text-gray-600 mb-4">The cost of managing leads in spreadsheets and WhatsApp chats.</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="50" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">CRM</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">CRM Features That Actually Matter for Pharma</h4>
+                    <p class="text-sm text-gray-600 mb-4">Cutting through the marketing noise to the features pharma teams really need.</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">CRM</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">Migrating to a Pharma CRM: A Checklist</h4>
+                    <p class="text-sm text-gray-600 mb-4">A practical checklist to migrate from spreadsheets to a structured CRM.</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SALES AUTOMATION ============ -->
+    <section id="sales-resources" class="py-24 bg-brand-gradient-light scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10" data-aos="fade-up">
+                <div class="w-14 h-14 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                    <h2 class="text-brandBlue font-bold tracking-wide uppercase text-sm mb-1">Category</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">Sales Automation</h3>
+                </div>
+            </div>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl" data-aos="fade-up" data-aos-delay="100">Insights on automating repetitive sales tasks so your team can focus on closing deals.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#" data-aos="fade-up" data-aos-delay="0" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Sales Automation</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">Automating Follow-Ups in Pharma Sales</h4>
+                    <p class="text-sm text-gray-600 mb-4">How to design a structured follow-up workflow that doesn't rely on memory.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="50" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Sales Automation</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">Reducing Sales Admin Work by 50%</h4>
+                    <p class="text-sm text-gray-600 mb-4">A practical guide to eliminating repetitive tasks from pharma field teams.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Sales Automation</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">Lead Assignment Automation in Pharma</h4>
+                    <p class="text-sm text-gray-600 mb-4">Routing leads to the right salesperson without manual effort.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DIGITAL TRANSFORMATION ============ -->
+    <section id="transformation-resources" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10" data-aos="fade-up">
+                <div class="w-14 h-14 rounded-xl bg-brandGreen/10 text-brandGreen flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-laptop-medical"></i>
+                </div>
+                <div>
+                    <h2 class="text-brandGreen font-bold tracking-wide uppercase text-sm mb-1">Category</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">Digital Transformation</h3>
+                </div>
+            </div>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl" data-aos="fade-up" data-aos-delay="100">Insights for pharma leaders planning to modernize their operations without disrupting the business.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#" data-aos="fade-up" data-aos-delay="0" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Transformation</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">Digital Transformation for Mid-Sized Pharma</h4>
+                    <p class="text-sm text-gray-600 mb-4">Where to start, what to prioritize and how to avoid common mistakes.</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="50" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Transformation</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">From Manual to Automated: A Pharma Roadmap</h4>
+                    <p class="text-sm text-gray-600 mb-4">A phased approach to modernizing pharma operations.</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:bg-white hover:border-brandGreen/30 transition group">
+                    <span class="text-xs font-bold text-brandGreen uppercase tracking-wider">Transformation</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandGreen transition">Avoiding Common Digital Transformation Mistakes</h4>
+                    <p class="text-sm text-gray-600 mb-4">Learnings from pharma digital projects that failed (and why).</p>
+                    <span class="text-brandGreen text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PHARMA TECHNOLOGY ============ -->
+    <section id="technology-resources" class="py-24 bg-brand-gradient-light scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10" data-aos="fade-up">
+                <div class="w-14 h-14 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div>
+                    <h2 class="text-brandBlue font-bold tracking-wide uppercase text-sm mb-1">Category</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">Pharma Technology</h3>
+                </div>
+            </div>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl" data-aos="fade-up" data-aos-delay="100">Guides and analysis on the technology stack powering modern pharma growth.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#" data-aos="fade-up" data-aos-delay="0" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Technology</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">Integrating Tech with Traditional Pharma Sales</h4>
+                    <p class="text-sm text-gray-600 mb-4">How technology can support — not replace — your field sales team.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="50" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Technology</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">APIs in Pharma: What You Need to Know</h4>
+                    <p class="text-sm text-gray-600 mb-4">Connecting your CRM, website, WhatsApp and analytics tools seamlessly.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+                <a href="#" data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-brandBlue/30 transition group">
+                    <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Technology</span>
+                    <h4 class="font-bold text-gray-900 mt-2 mb-3 group-hover:text-brandBlue transition">Cloud vs On-Premise for Pharma Businesses</h4>
+                    <p class="text-sm text-gray-600 mb-4">A comparison of deployment options for pharma digital systems.</p>
+                    <span class="text-brandBlue text-sm font-semibold flex items-center">Read <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GUIDES / E-BOOKS ============ -->
+    <section id="guides" class="py-24 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-brandGreen font-bold tracking-wide uppercase text-sm mb-2">Guides & E-books</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Free Downloadable Resources</h3>
+                <p class="text-lg text-gray-600">In-depth guides, checklists and playbooks to help your pharma business grow smarter.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Guide 1 -->
+                <div data-aos="fade-up" data-aos-delay="0" class="bg-gradient-to-br from-brandBlue to-brandGreen p-1 rounded-3xl shadow-md hover:shadow-xl transition duration-300">
+                    <div class="bg-white rounded-[22px] p-6 h-full flex flex-col">
+                        <div class="w-12 h-12 rounded-lg bg-brandBlue/10 text-brandBlue flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-wider mb-2">E-book</span>
+                        <h4 class="font-bold text-gray-900 text-lg mb-2">The Pharma Digital Growth Playbook</h4>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">A complete guide to building a connected digital growth system for your pharma business.</p>
+                        <a href="#" class="w-full text-center bg-gradient-to-br from-brandBlue to-brandGreen text-white font-semibold py-3 rounded-xl hover:shadow-md transition">
+                            Download Free
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-gradient-to-br from-brandBlue to-brandGreen p-1 rounded-3xl shadow-md hover:shadow-xl transition duration-300">
+                    <div class="bg-white rounded-[22px] p-6 h-full flex flex-col">
+                        <div class="w-12 h-12 rounded-lg bg-brandGreen/10 text-brandGreen flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <span class="text-xs font-bold text-brandGreen uppercase tracking-wider mb-2">Checklist</span>
+                        <h4 class="font-bold text-gray-900 text-lg mb-2">Pharma Digital Readiness Checklist</h4>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">Assess your current digital maturity and identify the next steps to grow.</p>
+                        <a href="#" class="w-full text-center bg-gradient-to-br from-brandBlue to-brandGreen text-white font-semibold py-3 rounded-xl hover:shadow-md transition">
+                            Download Free
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-gradient-to-br from-brandBlue to-brandGreen p-1 rounded-3xl shadow-md hover:shadow-xl transition duration-300">
+                    <div class="bg-white rounded-[22px] p-6 h-full flex flex-col">
+                        <div class="w-12 h-12 rounded-lg bg-brandBlue/10 text-brandBlue flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <span class="text-xs font-bold text-brandBlue uppercase tracking-wider mb-2">Guide</span>
+                        <h4 class="font-bold text-gray-900 text-lg mb-2">WhatsApp Automation for Pharma</h4>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">Step-by-step guide to setting up WhatsApp workflows for lead capture and follow-ups.</p>
+                        <a href="#" class="w-full text-center bg-gradient-to-br from-brandBlue to-brandGreen text-white font-semibold py-3 rounded-xl hover:shadow-md transition">
+                            Download Free
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section id="newsletter" class="py-24 bg-brand-gradient-light scroll-mt-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12 text-center" data-aos="fade-up">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brandBlue to-brandGreen flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Get Pharma Growth Insights</h3>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Subscribe to our newsletter and get practical insights on AI, digital marketing, automation and growth — written specifically for pharma leaders.
+                </p>
+
+                <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email address" 
+                        class="flex-1 px-5 py-3 rounded-xl border border-gray-200 focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 outline-none transition"
+                    >
+                    <button type="button" class="bg-gradient-to-br from-brandBlue to-brandGreen text-white font-semibold px-6 py-3 rounded-xl hover:shadow-lg transition duration-300">
+                        Subscribe
+                    </button>
+                </form>
+
+                <p class="text-xs text-gray-500">We respect your privacy. Unsubscribe anytime.</p>
+
+                <div class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-gray-500">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> Monthly insights</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> No spam</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> Free forever</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="py-20 bg-white relative overflow-hidden border-t border-gray-100">
+        <div class="absolute inset-0 bg-grid-pattern-light opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 data-aos="fade-up" class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Ready to Apply These Insights?</h2>
+            <h3 data-aos="fade-up" data-aos-delay="100" class="text-2xl md:text-4xl font-bold text-gray-700 mb-8">Let's Build Your Growth System.</h3>
+            
+            <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+                Book a free growth audit and we'll walk you through exactly where your pharma business can grow.
+            </p>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="flex justify-center gap-4 flex-col sm:flex-row">
+                <a href="contact.html" class="bg-gradient-to-br from-brandBlue to-brandGreen text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition duration-300 shadow-md">
+                    Book a Free Growth Audit
+                </a>
+                <a href="services.html" class="bg-white border-2 border-brandBlue text-brandBlue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition duration-300">
+                    Explore Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-gray-50 pt-20 pb-10 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div class="lg:col-span-2" data-aos="fade-right">
+                    <div class="mb-6">
+                        <img src="logo.jpeg" alt="PharmaScale Logo" class="h-12 w-auto object-contain">
+                    </div>
+                    <p class="text-brandGreen font-semibold mb-2">AI-Powered Growth for Pharma</p>
+                    <p class="text-gray-500 mb-6 max-w-sm text-sm">
+                        Transform Pharma. Accelerate Growth. Scale with AI. We help pharma companies modernize their marketing, sales and customer engagement with AI, automation and digital technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-brandBlue hover:text-white hover:border-brandBlue transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-brandBlue hover:text-white hover:border-brandBlue transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-brandBlue hover:text-white hover:border-brandBlue transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-brandBlue hover:text-white hover:border-brandBlue transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm">Solutions</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="services.html#ai-solutions" class="text-gray-500 hover:text-brandGreen transition">AI for Pharma</a></li>
+                        <li><a href="services.html#digital-marketing" class="text-gray-500 hover:text-brandGreen transition">Digital Marketing</a></li>
+                        <li><a href="services.html#whatsapp" class="text-gray-500 hover:text-brandGreen transition">WhatsApp Automation</a></li>
+                        <li><a href="services.html#crm" class="text-gray-500 hover:text-brandGreen transition">Pharma CRM</a></li>
+                        <li><a href="services.html#lead-gen" class="text-gray-500 hover:text-brandGreen transition">Lead Generation</a></li>
+                        <li><a href="services.html#sales-auto" class="text-gray-500 hover:text-brandGreen transition">Sales Automation</a></li>
+                        <li><a href="services.html#analytics" class="text-gray-500 hover:text-brandGreen transition">Analytics</a></li>
+                        <li><a href="services.html#digital-transformation" class="text-gray-500 hover:text-brandGreen transition">Digital Transformation</a></li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="text-gray-500 hover:text-brandGreen transition">About Us</a></li>
+                        <li><a href="why-pharmascale.html" class="text-gray-500 hover:text-brandGreen transition">Why PharmaScale</a></li>
+                        <li><a href="case-studies.html" class="text-gray-500 hover:text-brandGreen transition">Case Studies</a></li>
+                        <li><a href="resources.html" class="text-gray-500 hover:text-brandGreen transition">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-500 hover:text-brandGreen transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm">Industries</h4>
+                    <ul class="space-y-3 text-sm mb-6">
+                        <li><a href="industries.html#manufacturers" class="text-gray-500 hover:text-brandGreen transition">Pharma Manufacturers</a></li>
+                        <li><a href="industries.html#pcd-pharma" class="text-gray-500 hover:text-brandGreen transition">PCD Pharma</a></li>
+                        <li><a href="industries.html#distributors" class="text-gray-500 hover:text-brandGreen transition">Pharma Distributors</a></li>
+                        <li><a href="industries.html#otc-brands" class="text-gray-500 hover:text-brandGreen transition">OTC Brands</a></li>
+                    </ul>
+                    
+                    <h4 class="text-gray-900 font-bold mb-4 uppercase tracking-wider text-sm mt-6">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brandGreen transition">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 PharmaScale. All rights reserved.
+                </p>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <span class="mr-2">Powered by</span>
+                    <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandGreen">Advanced AI</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ AOS + Navbar JS ============ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // ============ NAVBAR JS ============
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+        const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+        const mobileServicesChevron = document.getElementById('mobileServicesChevron');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-xmark');
+            } else {
+                closeMobileMenu();
+            }
+        });
+
+        mobileServicesToggle.addEventListener('click', () => {
+            mobileServicesMenu.classList.toggle('hidden');
+            mobileServicesChevron.classList.toggle('rotate-180');
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileMenuIcon.classList.remove('fa-xmark');
+            mobileMenuIcon.classList.add('fa-bars');
+            mobileServicesMenu.classList.add('hidden');
+            mobileServicesChevron.classList.remove('rotate-180');
+        }
+
+        let lastScrollY = window.scrollY;
+        const scrollThreshold = 40;
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth < 1024) {
+                const currentScrollY = window.scrollY;
+                if (!mobileMenu.classList.contains('hidden') &&
+                    Math.abs(currentScrollY - lastScrollY) > scrollThreshold) {
+                    closeMobileMenu();
+                }
+                lastScrollY = currentScrollY;
+            }
+        }, { passive: true });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => closeMobileMenu());
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) closeMobileMenu();
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') &&
+                !mobileMenu.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
