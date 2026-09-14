@@ -944,19 +944,29 @@
         });
     </script>
 
-    <!-- navbar js -->
-     <script>
+</script>
+
+<!-- navbar js -->
+<script>
     // Grab the elements
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+
+    // Solutions accordion
+    const mobileSolutionsToggle = document.getElementById('mobileSolutionsToggle');
+    const mobileSolutionsMenu = document.getElementById('mobileSolutionsMenu');
+    const mobileSolutionsChevron = document.getElementById('mobileSolutionsChevron');
+
+    // Services accordion
     const mobileServicesToggle = document.getElementById('mobileServicesToggle');
     const mobileServicesMenu = document.getElementById('mobileServicesMenu');
     const mobileServicesChevron = document.getElementById('mobileServicesChevron');
 
-    // Toggle Mobile Menu
+    // ============ Toggle Mobile Menu ============
     mobileMenuBtn.addEventListener('click', () => {
         const isHidden = mobileMenu.classList.contains('hidden');
+
         if (isHidden) {
             mobileMenu.classList.remove('hidden');
             mobileMenuIcon.classList.remove('fa-bars');
@@ -966,22 +976,47 @@
         }
     });
 
-    // Toggle Services Accordion
-    mobileServicesToggle.addEventListener('click', () => {
-        mobileServicesMenu.classList.toggle('hidden');
-        mobileServicesChevron.classList.toggle('rotate-180');
+    // ============ Toggle Solutions Accordion ============
+    mobileSolutionsToggle.addEventListener('click', () => {
+        const isHidden = mobileSolutionsMenu.classList.contains('hidden');
+        mobileSolutionsMenu.classList.toggle('hidden');
+        mobileSolutionsChevron.classList.toggle('rotate-180');
+
+        // Optional: close Services when Solutions opens (accordion behavior)
+        if (isHidden) {
+            mobileServicesMenu.classList.add('hidden');
+            mobileServicesChevron.classList.remove('rotate-180');
+        }
     });
 
-    // Close mobile menu cleanly
+    // ============ Toggle Services Accordion ============
+    mobileServicesToggle.addEventListener('click', () => {
+        const isHidden = mobileServicesMenu.classList.contains('hidden');
+        mobileServicesMenu.classList.toggle('hidden');
+        mobileServicesChevron.classList.toggle('rotate-180');
+
+        // Optional: close Solutions when Services opens (accordion behavior)
+        if (isHidden) {
+            mobileSolutionsMenu.classList.add('hidden');
+            mobileSolutionsChevron.classList.remove('rotate-180');
+        }
+    });
+
+    // ============ Function to close mobile menu cleanly ============
     function closeMobileMenu() {
         mobileMenu.classList.add('hidden');
         mobileMenuIcon.classList.remove('fa-xmark');
         mobileMenuIcon.classList.add('fa-bars');
+
+        // Reset BOTH accordions
+        mobileSolutionsMenu.classList.add('hidden');
+        mobileSolutionsChevron.classList.remove('rotate-180');
+
         mobileServicesMenu.classList.add('hidden');
         mobileServicesChevron.classList.remove('rotate-180');
     }
 
-    // AUTO-CLOSE MENU ON SCROLL
+    // ============ AUTO-CLOSE MENU ON SCROLL ============
     let lastScrollY = window.scrollY;
     const scrollThreshold = 40;
 
@@ -996,17 +1031,17 @@
         }
     }, { passive: true });
 
-    // Close menu when a link is clicked
+    // ============ Close menu when any link is clicked ============
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => closeMobileMenu());
     });
 
-    // Close on resize to desktop
+    // ============ Close menu when resizing to desktop ============
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 1024) closeMobileMenu();
     });
 
-    // Close when clicking outside
+    // ============ Close menu when clicking outside ============
     document.addEventListener('click', (e) => {
         if (!mobileMenu.classList.contains('hidden') &&
             !mobileMenu.contains(e.target) &&
